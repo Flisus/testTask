@@ -7,12 +7,14 @@ object MDIChild: TMDIChild
   Color = clBtnFace
   Constraints.MaxHeight = 683
   Constraints.MaxWidth = 816
+  Constraints.MinHeight = 100
   Constraints.MinWidth = 300
   ParentFont = True
   FormStyle = fsMDIChild
   Position = poDefault
   Visible = True
   OnClose = FormClose
+  OnResize = FormResize
   TextHeight = 20
   object pnl1: TPanel
     Left = 0
@@ -21,24 +23,26 @@ object MDIChild: TMDIChild
     Height = 41
     Align = alBottom
     TabOrder = 0
-    ExplicitTop = 392
-    ExplicitWidth = 622
+    ExplicitTop = 595
+    ExplicitWidth = 798
     object lbPos: TLabel
-      Left = 517
-      Top = 6
+      Left = 522
+      Top = 1
       Width = 35
-      Height = 20
-      Align = alCustom
-      Anchors = [akTop, akRight]
+      Height = 39
+      Align = alRight
       Caption = 'lbPos'
+      Layout = tlCenter
+      ExplicitLeft = 517
+      ExplicitTop = 6
+      ExplicitHeight = 20
     end
     object trb1: TTrackBar
-      Left = 558
-      Top = 4
+      Left = 557
+      Top = 1
       Width = 246
-      Height = 47
-      Align = alCustom
-      Anchors = [akRight, akBottom]
+      Height = 39
+      Align = alRight
       DoubleBuffered = True
       LineSize = 10
       Max = 1000
@@ -52,6 +56,9 @@ object MDIChild: TMDIChild
       TabOrder = 0
       StyleName = 'Windows'
       OnChange = trb1Change
+      ExplicitLeft = 552
+      ExplicitTop = 4
+      ExplicitHeight = 47
     end
   end
   object scr1: TScrollBox
@@ -64,8 +71,8 @@ object MDIChild: TMDIChild
     ParentDoubleBuffered = False
     TabOrder = 1
     OnMouseWheel = scr1MouseWheel
-    ExplicitWidth = 622
-    ExplicitHeight = 392
+    ExplicitWidth = 798
+    ExplicitHeight = 595
     object PaintBox1: TPaintBox
       Left = 0
       Top = 0
